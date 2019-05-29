@@ -1,0 +1,57 @@
+<div class="create-page">
+   <h2 class="title">Create new client</h2>
+  <div class="page-content">
+    <div class="row">
+
+      <div class="col col-md-8">
+
+        <form class="create-form" [formGroup]="newUserForm" novalidate (ngSubmit)="onSubmit(newUserForm.value)">
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="text" placeholder="Shared Key" class="form-control" formControlName="sharedKey">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.sharedKey">
+              <mat-error *ngIf="newUserForm.get('sharedKey').hasError(validation.type) && (newUserForm.get('sharedKey').dirty || newUserForm.get('sharedKey').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="text" placeholder="Business Id" class="form-control" formControlName="businessId">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.businessId">
+              <mat-error *ngIf="newUserForm.get('businessId').hasError(validation.type) && (newUserForm.get('businessId').dirty || newUserForm.get('businessId').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="email"  placeholder="Email" class="form-control" formControlName="email">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.email">
+              <mat-error *ngIf="newUserForm.get('email').hasError(validation.type) && (newUserForm.get('email').dirty || newUserForm.get('email').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="number"  placeholder="Phone" class="form-control" formControlName="phone">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.phone">
+              <mat-error *ngIf="newUserForm.get('phone').hasError(validation.type) && (newUserForm.get('phone').dirty || newUserForm.get('phone').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="row submit-button-container">
+            <div class="col-md-4">
+              <button class="dubmit-button" matTooltipClass="tooltip-red" matTooltip="An error occurred please try again."
+                       [matTooltipDisabled]="errorRequest" mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!newUserForm.valid || newUserForm.pristine">Create</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

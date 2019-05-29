@@ -1,0 +1,16 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+/out/
+/src/main/resources/application.properties
+.gradle-cache/
+.DS_Store
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Mac
+.DS_Store

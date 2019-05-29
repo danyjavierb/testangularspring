@@ -1,0 +1,30 @@
+.create-page {
+  padding: 10px 5px;
+
+}
+.create-form .form-group {
+  margin-bottom: 5px;
+}
+.create-page .page-content {
+background-color: #fff;
+}
+.create-page .page-content .create-form {
+  padding: 20px;
+}
+.create-page .page-content .create-form .submit-button-container {
+  justify-content: flex-start;
+}
+.create-page .page-content .create-form .submit-button-container .submit-button {
+  width: 100%;
+}
+.create-page .page-content .create-form .input-style {
+  width: 100%;
+}
+.create-page .page-content .create-form .mat-error {
+  font-size: 10px;
+  position: relative;
+  top: -17px;
+}
+.title{
+  color:#757575;
+}

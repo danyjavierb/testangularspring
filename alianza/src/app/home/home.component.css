@@ -1,0 +1,109 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+.side-bar {
+
+  padding: 20px;
+}
+
+.logo {
+  width: 184px;
+
+}
+
+.clients-main {
+
+  margin-top: 15px;
+  color: #2C95CC;
+  display: inline-flex;
+  vertical-align: middle;
+
+}
+
+.clients-main mat-icon {
+  font-size: 2em;
+  margin-right: 10px;
+
+}
+
+.clients-main span {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.inner-menu button {
+  margin-right: 10px;
+  background-color: #2C95CC;
+
+}
+
+.inner-menu button mat-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.content-container {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.inner-search-menu {
+  margin-top: 20px;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+.inner-search-menu input {
+
+  width: 200px;
+  height: 24px;
+  border-radius: 10px 0 0 10px;
+  border: solid 1px #bbbbbb;
+  border-right: none;
+  vertical-align: bottom;
+  padding: 5px;
+
+}
+
+.inner-search-menu button.search-key {
+  border-radius: 0 10px 10px 0;
+  border: solid 1px #bbbbbb;
+  border-left: none;
+
+}
+
+.inner-search-menu button.advanced-search {
+  margin-left: 20px;
+  background-color: #2C95CC;
+}
+
+.users-table {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .hide-on-small-screens {
+    display: none;
+  }
+
+  .advanced-search {
+    position: relative;
+    top: 10px;
+    left: -17px;
+    margin-bottom: 13px;
+    margin-top: 13px;
+  }
+
+}
+

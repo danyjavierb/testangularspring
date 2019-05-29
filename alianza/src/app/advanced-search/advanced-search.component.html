@@ -1,0 +1,60 @@
+<div class="create-page">
+  <h2 class="title">Advanced Search</h2>
+  <div class="page-content">
+    <div class="row">
+
+      <div class="col col-md-8">
+
+        <form class="create-form" [formGroup]="searchForm" novalidate (ngSubmit)="onSubmit(searchForm.value)">
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="text" placeholder="Shared Key" class="form-control" formControlName="sharedKey">
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="text" placeholder="Business Id" class="form-control" formControlName="businessId">
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="email"  placeholder="Email" class="form-control" formControlName="email">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.email">
+              <mat-error *ngIf="searchForm.get('email').hasError(validation.type) && (searchForm.get('email').dirty || searchForm.get('email').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="number"  placeholder="Phone" class="form-control" formControlName="phone">
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="date"  placeholder="Start Date" class="form-control" formControlName="startsAt">
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="date"  placeholder="End Date" class="form-control" formControlName="endsAt">
+            </mat-form-field>
+          </div>
+
+
+          <div class="row submit-button-container">
+            <div class="col-md-4">
+              <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!searchForm.valid || searchForm.pristine">Search</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
